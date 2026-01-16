@@ -476,9 +476,6 @@
         <select id="dice-al" class="ios-select" onchange="app.updateHubs()">
             <option value="ALL">Any Airline</option>
             <option value="LOT">LOT Polish Airlines</option>
-            <option value="Lufthansa">Lufthansa</option>
-            <option value="Swiss">Swiss</option>
-            <option value="Austrian">Austrian</option>
         </select>
         <select id="dice-hub" class="ios-select" disabled>
             <option value="ALL">Any Hub</option>
@@ -567,11 +564,7 @@
         ROUTES: [
             { al: "LOT", d: "EPWA", a: "KJFK", t: 9.0, ac: "B787-9", fuel: "75t", status: "ACTIVE" },
             { al: "LOT", d: "EDDF", a: "EGLL", t: 1.5, ac: "A320neo", fuel: "5.8t", status: "ACTIVE" },
-            { al: "Swiss", d: "LSZH", a: "KJFK", t: 8.8, ac: "A330-300", fuel: "105.0t", status: "SEASONAL" },
-            { al: "Austrian", d: "LOWW", a: "VTBS", t: 10.0, ac: "B777-200", fuel: "130.0t", status: "ACTIVE" },
-            { al: "Eurowings", d: "EDDL", a: "LEPA", t: 2.2, ac: "A320", fuel: "8.5t", status: "SEASONAL" },
-            { al: "Condor", d: "EDDF", a: "CUN", t: 11.5, ac: "A330neo", fuel: "85.0t", status: "CANCELLED" },
-            { al: "Lufthansa", d: "EDDF", a: "VTAA", t: 10.5, ac: "A330-300", fuel: "90.0t", status: "ACTIVE" }
+          
         ],
         FLEET: [
             { t: "Boeing 787-9", op: "LOT", r: "14,800km", fuel: "5.4t/h" },
@@ -590,7 +583,7 @@
              "LSZH":[47.45,8.55], "LOWW":[48.11,16.56], "VTBS":[13.69,100.75], "EDDL":[51.28,6.76], 
              "LEPA":[39.55,2.73], "CUN":[21.04,-86.87], "VTAA":[45.67,11.53]
         },
-        HUBS: { "LOT": ["EPWA", "LHBP"], "Lufthansa": ["EDDF", "EDDM"], "Swiss": ["LSZH"], "Austrian": ["LOWW"] }
+        HUBS: { "LOT": ["EPWA", "LHBP"], }
     };
 
     const app = {
