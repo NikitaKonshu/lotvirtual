@@ -462,8 +462,7 @@
             <div class="ofp-box"><span class="ofp-lbl">AIRCRAFT</span><span class="ofp-val" id="br-ac"></span></div>
             <div class="ofp-box"><span class="ofp-lbl">DEP</span><span class="ofp-val" id="br-dep"></span></div>
             <div class="ofp-box"><span class="ofp-lbl">ARR</span><span class="ofp-val" id="br-arr"></span></div>
-            <div class="ofp-box"><span class="ofp-lbl">FUEL</span><span class="ofp-val" id="br-fuel"></span></div>
-            <div class="ofp-box"><span class="ofp-lbl">TIME</span><span class="ofp-val" id="br-time"></span></div>
+            <div class="ofp-box" style="grid-column: 1 / -1;"><span class="ofp-lbl">TIME</span><span class="ofp-val" id="br-time"></span></div>
         </div>
         <button class="btn-primary" style="margin-top:20px;" onclick="app.accept()">ACCEPT & SIGN</button>
         <button class="btn-primary" style="background:transparent; border:1px solid #333; color:#fff; margin-top:10px;" onclick="app.closeM()">CLOSE</button>
@@ -754,7 +753,6 @@
                 document.getElementById('br-ac').innerText = r.ac; 
                 document.getElementById('br-dep').innerText = r.d; 
                 document.getElementById('br-arr').innerText = r.a; 
-                document.getElementById('br-fuel').innerText = r.fuel; 
                 document.getElementById('br-time').innerText = r.t + 'H'; 
                 document.getElementById('efb-modal').style.display = 'flex'; 
             }, 1000); 
@@ -789,7 +787,6 @@
                 const pct = Math.min(el/this.active.dur, 1); 
                 document.getElementById('af-bar').style.width = (pct*100)+'%'; 
                 
-                // Format Real Time HH:MM:SS
                 const totalSecs = Math.floor(el/1000);
                 const h = Math.floor(totalSecs / 3600);
                 const m = Math.floor((totalSecs % 3600) / 60);
